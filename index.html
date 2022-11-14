@@ -11,7 +11,37 @@
 
 <body>
     <main>
-
+        <div id="welcomeScreen">
+            <h2>Guess the random number between 1-100</h2>
+            <img class="image" src="./images/img1.jpg" alt="">
+            <section class="eventSection">
+                <p>Select the difficulty</p>
+                <div class="button-wrapper">
+                    <button>Easy: 10 attempts</button>
+                    <button>Easy: 5 attempts</button>
+                </div>
+            </section>
+        </div>
+        <!-- our actual game area -->
+        <div id="gameArea">
+            <div id="newGameButton">
+                <button>New Game</button>
+            </div>
+            <section>
+                <h3>Your Guess</h3>
+                <input type="text" id="inputBox" min="1" placeholder="Enter Your Number">
+            </section>
+            <section class="stats">
+                <div class="info">
+                    <p>Number of previous attempts</p>
+                    <span id="attempts">0</span>
+                </div>
+                <div class="info">
+                    <p>Number of previous guesses</p>
+                    <span id="guesses">0</span>
+                </div>
+            </section>
+        </div>
     </main>
     <script src="./index.js"></script>
 </body>
