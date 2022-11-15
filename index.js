@@ -2,7 +2,7 @@ let computerGuess;
 let userGuess = [];
 let userGuessUpdate = document.getElementById('textOutput');
 let userNumberUpdate = document.getElementById("inputBox");
-
+let audio = new Audio('./audio/audio1.wav')
 const init = () => {
     computerGuess = Math.floor(Math.random() * 100);
     // console.log(computerGuess) 
@@ -16,6 +16,7 @@ const startGame = () => {
 }
 //reload the game 
 const newGame = () => {
+    audio.play();
     window.location.reload();
 }
 //start new game 
@@ -63,11 +64,13 @@ const compareGuess = () => {
     document.getElementById('attempts').innerText = userGuess.length;
 };
 const easyMode = () => {
+    audio.play();
     maxGuess = 10;
     startGame();
 }
 
 const hardMode = () => {
+    audio.play();
     maxGuess = 5;
     startGame();
 }
